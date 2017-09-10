@@ -6,6 +6,10 @@
     <groupId>kaibito.young</groupId>
     <artifactId>workers</artifactId>
     <version>1.0</version>
+
+    <name>workers</name>
+    <description>Workers</description>
+
     <build>
         <plugins>
             <plugin>
@@ -16,12 +20,21 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>build-test-jar</id>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-    <packaging>jar</packaging>
 
-    <name>workers</name>
-    <description>Workers</description>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
